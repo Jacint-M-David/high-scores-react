@@ -1,7 +1,3 @@
-.App {
-  text-align: center;
-}
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +31,74 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////// */
+/*  */
+
+@font-face {
+        font-family: 'publicPixelFont';
+        src: url('./PublicPixel-0W5Kv.ttf');
+}
+
+* {
+    font-family: publicPixelFont, monospace;
+}
+
+.main-table {
+    border: 0.25rem solid rgb(0, 102, 204);
+    padding: 0 1rem;
+    margin: 2rem auto;
+    min-width: 600px;
+}
+
+.country-tables {
+    margin: auto;
+    width: 100%;
+}
+
+.country-table {
+    border: 1rem solid greenyellow;
+    padding: 1rem;
+    margin: 1rem auto;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.score-rows {
+    text-align: right;
+    font-weight: 700;
+    border: 3px solid black;
+}
+
+.points {
+    color: red;
+}
+
+.countries-title, h1 {
+    color: rgb(112, 186, 255);
+}
+
+h1 {
+    padding-bottom: 0;
+    margin-bottom: auto;
+    font-size: 1.75rem;
+    margin-top: 1rem;
+}
+
+h2 {
+    font-size: 1.25rem;
+}
+
+tr.score-rows {
+    border: black 2px solid;
+    margin: 0 5rem;
+}
+
+.td {
+    height: 2rem;
+    width: 50%;
+    padding: 0.5rem;
+    margin: 0.25rem;
+    font-size: 0.85rem;
 }
