@@ -2,12 +2,12 @@ import React from "react";
 
 const ScoreRow = (props) => {
   return (
-    <tr class="score-rows">
-      <td class="td">
+    <tr className="score-rows">
+      <td className="td">
         <span>{props.countryRow.n}</span>
       </td>
-      <td class="td">
-        <span class="points">{props.countryRow.s}</span>
+      <td className="td">
+        <span className="points">{props.countryRow.s}</span>
       </td>
     </tr>
   );
