@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import "./App.css";
-import allCountryScores from "./scores.js";
-import CountryTables from "./CountryTables.js";
 import SortButton from "./SortButton.js";
+import HighScoresPerCountry from "./HighScoresPerCountry.js";
+import HighScoresWorldWide from "./HighScoresWorldWide";
+import ChangeButton from "./ChangeButton";
 
 function App() {
   const [descendingOrder, setDescendingOrder] = useState(true);
+  const [isWorldWideTable, setIsWorldWideTable] = useState(true);
   const alphabeticalOrder = (data) => {
     return data.sort((countryA, countryB) => {
       return countryA.name > countryB.name ? 1 : -1;
@@ -15,23 +17,25 @@ function App() {
   return (
     <div className="App">
       <nav className="nav">
+        <ChangeButton
+          isWorldWideTable={isWorldWideTable}
+          setIsWorldWideTable={setIsWorldWideTable}
+        />
         <SortButton order={descendingOrder} setOrder={setDescendingOrder} />
       </nav>
-      <table className="main-table">
-        <thead>
-          <tr>
-            <th>
-              <h1>High Scores per Country</h1>
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <CountryTables
-            data={alphabeticalOrder(allCountryScores)}
-            order={descendingOrder}
-          />
-        </tbody>
-      </table>
+      {isWorldWideTable ? (
+        <HighScoresWorldWide
+          descendingOrder={descendingOrder}
+          alphabeticalOrder={alphabeticalOrder}
+          view={isWorldWideTable}
+        />
+      ) : (
+        <HighScoresPerCountry
+          descendingOrder={descendingOrder}
+          alphabeticalOrder={alphabeticalOrder}
+          view={isWorldWideTable}
+        />
+      )}
     </div>
   );
 }

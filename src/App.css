@@ -45,11 +45,25 @@
     font-family: publicPixelFont, monospace;
 }
 
+body {
+    width: 100%;
+}
+
+#root {background-color: rgb(112, 186, 255);
+width: 100%;
+padding-bottom: 5rem;}
+
+.App {
+    width: 100%;
+}
+
 .main-table {
     border: 0.25rem solid rgb(0, 102, 204);
     padding: 0 1rem;
-    margin: 2rem auto;
-    min-width: 600px;
+    margin: 2rem auto 0 auto;
+    min-width: 50rem;
+    max-width: 80%;
+    background-color: white;
 }
 
 .country-tables {
@@ -61,7 +75,7 @@
     border: 1rem solid greenyellow;
     padding: 1rem;
     margin: 1rem auto;
-    width: 100%;
+    width: 90%;
     border-collapse: collapse;
 }
 
@@ -69,6 +83,10 @@
     text-align: right;
     font-weight: 700;
     border: 3px solid black;
+}
+
+.td-name {
+    text-align: center;
 }
 
 .points {
@@ -113,9 +131,13 @@ tr.score-rows {
     padding: 1rem;
     margin: auto;
     cursor: pointer;
-    margin-top: 1rem;
+    margin: 1rem 2rem 0;
 }
 
 .nav {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: auto;
 }
