@@ -14,7 +14,9 @@ function App() {
 
   return (
     <div className="App">
-      <SortButton order={descendingOrder} setOrder={setDescendingOrder} />
+      <nav className="nav">
+        <SortButton order={descendingOrder} setOrder={setDescendingOrder} />
+      </nav>
       <table className="main-table">
         <thead>
           <tr>
